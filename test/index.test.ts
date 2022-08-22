@@ -1,4 +1,3 @@
-import exp from 'constants'
 import { describe, expect, it } from 'vitest'
 import { firstMatch, isMatch, matches } from '../src/index'
 const fixtureRegex = () => /(?<=^v?|\sv?)(?:(?:0|[1-9]\d*)\.){2}(?:0|[1-9]\d*)(?:-(?:0|[1-9]\d*|[\da-z-]*[a-z-][\da-z-]*)(?:\.(?:0|[1-9]\d*|[\da-z-]*[a-z-][\da-z-]*))*)?(?:\+[\da-z-]+(?:\.[\da-z-]+)*)?(?=$|\s)/gi
