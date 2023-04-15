@@ -40,7 +40,7 @@ export function firstMatch(regex: RegExp, string: string, options?: Options) {
   }
 }
 
-export function matches(regex: RegExp, string: string, {timeout = Number.POSITIVE_INFINITY, matchTimeout = Number.POSITIVE_INFINITY} = {}) {
+export function matches(regex: RegExp, string: string, { timeout = Number.POSITIVE_INFINITY, matchTimeout = Number.POSITIVE_INFINITY } = {}) {
   if (!regex.global)
     throw new Error('The regex must have the global flag, otherwise, use `firstMatch()` instead')
 
@@ -51,7 +51,7 @@ export function matches(regex: RegExp, string: string, {timeout = Number.POSITIV
 
         while (true) {
           // `matches.next` must be called within an arrow function so that it doesn't loose its context.
-          const nextMatch = functionTimeout(() => matches.next(), {timeout: (timeout !== Number.POSITIVE_INFINITY || matchTimeout !== Number.POSITIVE_INFINITY) ? Math.min(timeout, matchTimeout) : undefined})
+          const nextMatch = functionTimeout(() => matches.next(), { timeout: (timeout !== Number.POSITIVE_INFINITY || matchTimeout !== Number.POSITIVE_INFINITY) ? Math.min(timeout, matchTimeout) : undefined })
 
           const end = timeSpan()
           const { value, done } = nextMatch()

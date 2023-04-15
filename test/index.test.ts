@@ -11,17 +11,17 @@ describe('test match', () => {
     expect(isMatch(/^v\d+/, fixtureString)).toBe(true)
   })
   it('firstMatch', () => {
-    expect(firstMatch(fixtureRegex(), fixtureString, {timeout: 10})?.match).toBe(undefined)
-    expect(firstMatch(/^v\d+/g, fixtureString, {timeout: 1000})?.match).toBe('v1')
-    expect(firstMatch(fixtureRegex(), 'v1.1.3', {timeout: 10})?.match).toBe('1.1.3')
+    expect(firstMatch(fixtureRegex(), fixtureString, { timeout: 10 })?.match).toBe(undefined)
+    expect(firstMatch(/^v\d+/g, fixtureString, { timeout: 1000 })?.match).toBe('v1')
+    expect(firstMatch(fixtureRegex(), 'v1.1.3', { timeout: 10 })?.match).toBe('1.1.3')
     expect(firstMatch(/^v\d+/g, fixtureString)?.match).toBe('v1')
   })
 
-  it('matches',()=>{
-    expect([...matches(fixtureRegex(), fixtureString, {timeout: 10})]).toStrictEqual([])
-    expect([...matches(fixtureRegex(), 'v1.1.3', {timeout: 10})][0].match).toStrictEqual('1.1.3')
-    expect([...matches(/^v\d+/g, fixtureString, {timeout: 1000})][0].match).toStrictEqual('v1')
-    expect([...matches(/^v\d+/g, fixtureString, {timeout: 1000, matchTimeout: 1000})][0].match).toStrictEqual('v1')
+  it('matches', () => {
+    expect([...matches(fixtureRegex(), fixtureString, { timeout: 10 })]).toStrictEqual([])
+    expect([...matches(fixtureRegex(), 'v1.1.3', { timeout: 10 })][0].match).toStrictEqual('1.1.3')
+    expect([...matches(/^v\d+/g, fixtureString, { timeout: 1000 })][0].match).toStrictEqual('v1')
+    expect([...matches(/^v\d+/g, fixtureString, { timeout: 1000, matchTimeout: 1000 })][0].match).toStrictEqual('v1')
     expect([...matches(/^v\d+/g, fixtureString)][0].match).toStrictEqual('v1')
   })
 })
