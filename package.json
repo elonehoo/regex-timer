@@ -1,6 +1,6 @@
 {
   "name": "@elonehoo/regex-timer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Make a regular expression time out if it takes too long to execute",
   "keywords": [
     "regex",
