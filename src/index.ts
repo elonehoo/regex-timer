@@ -3,13 +3,15 @@ import functionTimeout, { isTimeoutError } from 'function-timeout'
 import timeSpan from 'time-span'
 import cloneRegexp from 'clone-regexp'
 
-const resultToMatch = (result: any) => ({
-  match: result[0],
-  index: result.index,
-  group: result.slice(1),
-  namedGroups: result.groups ?? {},
-  input: result.input,
-})
+function resultToMatch(result: any) {
+  return {
+    match: result[0],
+    index: result.index,
+    group: result.slice(1),
+    namedGroups: result.groups ?? {},
+    input: result.input,
+  }
+}
 
 export function isMatch(regex: RegExp, string: string, options?: Options): boolean {
   try {
