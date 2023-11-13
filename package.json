@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "clone-regexp": "^3.0.0",
-    "function-timeout": "^0.1.1",
+    "function-timeout": "^1.0.1",
     "time-span": "^5.1.0"
   },
   "devDependencies": {
