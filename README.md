@@ -20,4 +20,3 @@ import {isMatch} from '@elonehoo/regex-timer'
 
 console.log(isMatch(/\d+/, getUserInput(), {timeout: 1000}))
 ```
-
