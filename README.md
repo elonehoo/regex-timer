@@ -16,7 +16,7 @@ pnpm install @elonehoo/regex-timer
 ## Usage
 
 ```typescript
-import {isMatch} from '@elonehoo/regex-timer'
+import { isMatch } from '@elonehoo/regex-timer'
 
-console.log(isMatch(/\d+/, getUserInput(), {timeout: 1000}))
+console.log(isMatch(/\d+/, getUserInput(), { timeout: 1000 }))
 ```

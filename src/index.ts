@@ -1,7 +1,7 @@
 import type { Options } from 'function-timeout'
+import cloneRegexp from 'clone-regexp'
 import functionTimeout, { isTimeoutError } from 'function-timeout'
 import timeSpan from 'time-span'
-import cloneRegexp from 'clone-regexp'
 
 function resultToMatch(result: any) {
   return {
