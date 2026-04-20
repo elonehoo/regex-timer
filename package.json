@@ -55,7 +55,7 @@
     "@vitest/coverage-v8": "^4.1.4",
     "bumpp": "11.0.1",
     "c8": "11.0.0",
-    "eslint": "10.2.0",
+    "eslint": "10.2.1",
     "pnpm": "10.33.0",
     "typescript": "5.9.3",
     "unbuild": "^3.6.1",
