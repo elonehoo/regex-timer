@@ -45,7 +45,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "clone-regexp": "^3.0.0",
+    "clone-regexp": "^4.0.0",
     "function-timeout": "^1.0.2",
     "time-span": "^5.1.0"
   },
